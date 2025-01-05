@@ -7,21 +7,21 @@ public class module1assignment {
 
         // Prompt user for the initial ammount of water
         System.out.print("Enter the amount of water in kilograms: ");
-        double massofwater = scanner.nextDouble();
+        double waterMass = scanner.nextDouble();
 
         // Prompt user for the initial temperature in Celsius
         System.out.print("Enter the initial temperature in Celsius: ");
-        double initialtemp = scanner.nextDouble();
+        double initialTemperature = scanner.nextDouble();
 
         // Prompt user for the final temperature in Celsius
         System.out.print("Enter the final temperature in Celsius: ");
-        double finaltemp = scanner.nextDouble();
+        double finalTemperature = scanner.nextDouble();
 
         // Use formula from module 1 assignment
-        double neededengery = massofwater * (finaltemp - initialtemp) * 4184;
+        double Q = waterMass * (finalTemperature - initialTemperature) * 4184;
 
         // Print the results
-        System.out.println("The energy needed to heat the water is: " + neededengery + " Joules");
+        System.out.println("The energy needed to heat the water is: " + Q + " Joules");
 
         // Close the scanner
         scanner.close();
