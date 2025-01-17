@@ -1,3 +1,9 @@
+/**
+ * Name: Jacob Cannamela
+ * Assignment: Module 2 Assignment
+ * Date: 1/16/2025
+ */
+
 import java.util.Scanner;
 import java.util.Random;
 
