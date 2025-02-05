@@ -1,51 +1,65 @@
 // Jacob Cannamela
 // CSD 402
-//1.20.2025
-// module 4 assignment
-
+//2.5.2025
+// module 4 assignment redo
 
 public class cannamelamod4 {
 
-    // Method to reverse entire string
-    public static String reverse(String text) {
-        StringBuilder reversed = new StringBuilder(text);
-        return reversed.reverse().toString();
+    // Method to calculate average for short array
+    public static short average(short[] array) {
+        int sum = 0;
+        for (short num : array) {
+            sum += num;
+        }
+        return (short) (sum / array.length);
     }
 
-    // Method to reverse words in a sentence
-    public static String reverseWords(String text) {
-        String[] words = text.split(" ");
-        StringBuilder reversed = new StringBuilder();
-        for (int i = words.length - 1; i >= 0; i--) {
-            reversed.append(words[i]).append(" ");
+    // Method to calculate average for int array
+    public static int average(int[] array) {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
         }
-        return reversed.toString().trim();
+        return sum / array.length;
     }
 
-    // Method to reverse characters within each word
-    public static String reverseCharsInWords(String text) {
-        String[] words = text.split(" ");
-        StringBuilder reversed = new StringBuilder();
-        for (String word : words) {
-            reversed.append(new StringBuilder(word).reverse()).append(" ");
+    // Method to calculate average for long array
+    public static long average(long[] array) {
+        long sum = 0;
+        for (long num : array) {
+            sum += num;
         }
-        return reversed.toString().trim();
+        return sum / array.length;
+    }
+
+    // Method to calculate average for double array
+    public static double average(double[] array) {
+        double sum = 0;
+        for (double num : array) {
+            sum += num;
+        }
+        return sum / array.length;
     }
 
     public static void main(String[] args) {
-        // Testing string reversal
-        String originalText = "Having fun for CSD402";
-        System.out.println("Original: " + originalText);
-        System.out.println("Reversed: " + reverse(originalText));
+        // Testing short array
+        short[] shortArray = {100, 35, 77};
+        System.out.println("Short Array: " + java.util.Arrays.toString(shortArray));
+        System.out.println("Average (short): " + average(shortArray));
 
-        // Testing word reversal
-        String sentence = "Java is not as fun as python";
-        System.out.println("Original Sentence: " + sentence);
-        System.out.println("Words Reversed: " + reverseWords(sentence));
+        // Testing int array
+        int[] intArray = {4, 8, 44, 67};
+        System.out.println("Int Array: " + java.util.Arrays.toString(intArray));
+        System.out.println("Average (int): " + average(intArray));
 
-        // Testing character reversal in each word
-        String text = "Python is king";
-        System.out.println("Original Text: " + text);
-        System.out.println("Chars in Words Reversed: " + reverseCharsInWords(text));
+        // Testing long array
+        long[] longArray = {111L, 332L, 487L, 694L, 876L};
+        System.out.println("Long Array: " + java.util.Arrays.toString(longArray));
+        System.out.println("Average (long): " + average(longArray));
+
+        // Testing double array
+        double[] doubleArray = {3, 5, 7, 9, 10, 18};
+        System.out.println("Double Array: " + java.util.Arrays.toString(doubleArray));
+        System.out.println("Average (double): " + average(doubleArray));
     }
 }
